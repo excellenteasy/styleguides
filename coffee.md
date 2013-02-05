@@ -6,7 +6,7 @@ Please note that this is a work-in-progress: there is much more that can be spec
 
 ## Table of Contents
 
-* [The CoffeeScript Style Guide](#guide)
+* [The CoffeeScript Style Guide](#coffeescript-style-guide)
     * [Code Layout](#code-layout)
         * [Tabs or Spaces?](#tabs-or-spaces)
         * [Maximum Line Length](#maximum-line-length)
