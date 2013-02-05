@@ -450,5 +450,55 @@ console.log args... # Yes
 (a, b, c, rest...) -> # Yes
 ```
 
+This is the suggested [CoffeLint](http://www.coffeelint.org/) configuration.
+
+```json
+{
+  "no_tabs":{
+    "level":"error"
+  },
+  "no_trailing_whitespace":{
+    "level":"error"
+  },
+  "max_line_length":{
+    "value":79,
+    "level":"error"
+  },
+  "camel_case_classes":{
+    "level":"error"
+  },
+  "indentation":{
+    "value":2,
+    "level":"error"
+  },
+  "no_implicit_braces":{
+    "level":"warn"
+  },
+  "no_trailing_semicolons":{
+    "level":"error"
+  },
+  "no_plusplus":{
+    "level":"ignore"
+  },
+  "no_throwing_strings":{
+    "level":"warn"
+  },
+  "cyclomatic_complexity":{
+    "value":11,
+    "level":"ignore"
+  },
+  "line_endings":{
+    "value":"unix",
+    "level":"ignore"
+  },
+  "no_implicit_parens":{
+    "level":"warn"
+  },
+  "no_stand_alone_at":{
+    "level":"error"
+  }
+}
+```
+
 [coffeescript-issue-425]: https://github.com/jashkenas/coffee-script/issues/425
 [camel-case-variations]: http://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms
