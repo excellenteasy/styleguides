@@ -381,7 +381,7 @@ Annotate your source with [Codo](http://github.com/netzpirat/codo) tags to add s
 class Example.Animal
 
   # The Answer to the Ultimate Question of Life, the Universe, and Everything
-  @ANSWER = 42
+  answer = 42
 
   # Construct a new animal.
   #
