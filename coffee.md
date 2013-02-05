@@ -114,13 +114,15 @@ Additional recommendations:
 
 ## Comments
 
-If modifying code that is described by an existing comment, update the comment such that it accurately reflects the new code. (Ideally, improve the code to obviate the need for the comment, and delete the comment entirely.)
+If modifying code that is described by an existing comment, update the comment such that it accurately reflects the new code.
 
 The first word of the comment should be capitalized, unless the first word is an identifier that begins with a lower-case letter.
 
-If a comment is short, the period at the end can be omitted.
+Comments should be written as full sentences, with proper punctuation.
 
 ### Block Comments
+
+Don't use real block comments, unless you intend to pass along the comment to the underlying JS, like a license, or warning.
 
 Block comments apply to the block of code that follows them.
 
@@ -146,8 +148,6 @@ stop()
 Inline comments are placed on the line immediately above the statement that they are describing. If the inline comment is sufficiently short, it can be placed on the same line as the statement (separated by a single space from the end of the statement).
 
 All inline comments should start with a `#` and a single space.
-
-The use of inline comments should be limited, because their existence is typically a sign of a code smell.
 
 Do not use inline comments when they state the obvious:
 
