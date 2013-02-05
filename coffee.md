@@ -457,10 +457,6 @@ coffeelintOptions:
   max_line_length:
     value: 79
     level: 'warn'
-  no_implicit_braces:
-    level: 'warn'
-  no_implicit_parens:
-    level: 'warn'
   no_throwing_strings:
     level: 'warn'
   no_stand_alone_at:
