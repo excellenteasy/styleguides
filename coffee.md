@@ -75,15 +75,15 @@ Avoid extraneous whitespace in the following situations:
 - Immediately inside parentheses, brackets or braces
 
     ```coffee
-       ($ 'body') # Yes
-       ( $ 'body' ) # No
+    ($ 'body') # Yes
+    ( $ 'body' ) # No
     ```
 
 - Immediately before a comma
 
     ```coffee
-       console.log x, y # Yes
-       console.log x , y # No
+    console.log x, y # Yes
+    console.log x , y # No
     ```
 
 Additional recommendations:
@@ -103,13 +103,13 @@ Additional recommendations:
     - comparisons: `==`, `<`, `>`, `<=`, `>=`, `unless`, etc.
     - arithmetic operators: `+`, `-`, `*`, `/`, etc.
 
-    - _(You can use more than one space around these operators if an uninterrupted sequence of assignment statements follows each other.)_
+    - _(You can use more than one space if an uninterrupted sequence of assignment statements follows each other.)_
 
         ```coffee
-           # Yes
-           x      = 1
-           y      = 1
-           fooBar = 3
+        # Yes
+        x      = 1
+        y      = 1
+        fooBar = 3
         ```
 
 ## Comments
@@ -129,16 +129,16 @@ Each line of a block comment starts with a `#` and a single space, and should be
 Paragraphs inside of block comments are separated by a line containing a single `#`.
 
 ```coffee
-  # This is a block comment. Note that if this were a real block
-  # comment, we would actually be describing the proceeding code.
-  #
-  # This is the second paragraph of the same block comment. Note
-  # that this paragraph was separated from the previous paragraph
-  # by a line containing a single comment character.
+# This is a block comment. Note that if this were a real block
+# comment, we would actually be describing the proceeding code.
+#
+# This is the second paragraph of the same block comment. Note
+# that this paragraph was separated from the previous paragraph
+# by a line containing a single comment character.
 
-  init()
-  start()
-  stop()
+init()
+start()
+stop()
 ```
 
 ### Inline Comments
@@ -152,15 +152,15 @@ The use of inline comments should be limited, because their existence is typical
 Do not use inline comments when they state the obvious:
 
 ```coffee
-  # No
-  x = x + 1 # Increment x
+# No
+x = x + 1 # Increment x
 ```
 
 However, inline comments can be useful in certain scenarios:
 
 ```coffee
-  # Yes
-  x = x + 1 # Compensate for border
+# Yes
+x = x + 1 # Compensate for border
 ```
 
 ## Naming Conventions
@@ -270,31 +270,31 @@ Favor `unless` over `if` for negative conditions.
 Instead of using `unless...else`, use `if...else`:
 
 ```coffee
-  # Yes
-  if true
-    ...
-  else
-    ...
+# Yes
+if true
+  ...
+else
+  ...
 
-  # No
-  unless false
-    ...
-  else
-    ...
+# No
+unless false
+  ...
+else
+  ...
 ```
 
 Multi-line if/else clauses should use indentation:
 
 ```coffee
-  # Yes
-  if true
-    ...
-  else
-    ...
+# Yes
+if true
+  ...
+else
+  ...
 
-  # No
-  if true then ...
-  else ...
+# No
+if true then ...
+else ...
 ```
 
 ## Looping and Comprehensions
@@ -302,13 +302,13 @@ Multi-line if/else clauses should use indentation:
 Take advantage of comprehensions whenever possible:
 
 ```coffee
-  # Yes
-  result = (item.name for item in array)
+# Yes
+result = (item.name for item in array)
 
-  # No
-  results = []
-  for item in array
-    results.push item.name
+# No
+results = []
+for item in array
+  results.push item.name
 ```
 
 To filter:
@@ -343,17 +343,17 @@ Write the annotation on the line immediately above the code that the annotation 
 The annotation keyword should be followed by a colon and a space, and a descriptive note.
 
 ```coffee
-  # FIXME: The client's current state should *not* affect payload processing.
-  resetClientState()
-  processPayload()
+# FIXME: The client's current state should *not* affect payload processing.
+resetClientState()
+processPayload()
 ```
 
 If multiple lines are required by the description, indent subsequent lines with two spaces:
 
 ```coffee
-  # TODO: Ensure that the value returned by this call falls within a certain
-  #   range, or throw an exception.
-  analyze()
+# TODO: Ensure that the value returned by this call falls within a certain
+#   range, or throw an exception.
+analyze()
 ```
 
 Annotation types:
