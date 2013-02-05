@@ -449,3 +449,6 @@ console.log args... # Yes
 
 (a, b, c, rest...) -> # Yes
 ```
+
+[coffeescript-issue-425]: https://github.com/jashkenas/coffee-script/issues/425
+[camel-case-variations]: http://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms
