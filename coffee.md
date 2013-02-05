@@ -26,6 +26,7 @@ Please note that this is a work-in-progress: there is much more that can be spec
     * [Extending Native Objects](#extending-native-objects)
     * [Exceptions](#exceptions)
     * [Annotations](#annotations)
+    * [Documentation](#documentation)
     * [Miscellaneous](#miscellaneous)
 
 ## Code layout
@@ -365,6 +366,10 @@ Annotation types:
 - `REVIEW`: describe code that should be reviewed to confirm implementation
 
 If a custom annotation is required, the annotation should be documented in the project's README.
+
+## Documentation
+
+Annotate your source with [Codo](http://github.com/netzpirat/codo) tags to add semantic information to your code.
 
 ## Miscellaneous
 
