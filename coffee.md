@@ -103,15 +103,10 @@ Additional recommendations:
     - comparisons: `==`, `<`, `>`, `<=`, `>=`, `unless`, etc.
     - arithmetic operators: `+`, `-`, `*`, `/`, etc.
 
-    - _(Do not use more than one space around these operators)_
+    - _(You can use more than one space around these operators if an uninterrupted sequence of assignment statements follows each other.)_
 
         ```coffee
            # Yes
-           x = 1
-           y = 1
-           fooBar = 3
-
-           # No
            x      = 1
            y      = 1
            fooBar = 3
