@@ -63,7 +63,7 @@ Don't include trailing whitespace on any lines.
 
 Property order is defined by 3 things. **Functionality**, **logical groups** and in a small part **alphabetical order**.
 
-_These are very loose rules, because there is no order, that wouldn't require tons of exeptions._
+_These are very loose rules, because there is no order, that wouldn't require tons of exceptions._
 
 Do things on purpose and do things consistently.
 
