@@ -19,9 +19,9 @@ Please note that this is a work-in-progress: there is much more that can be spec
         * [Modules](#modules)
         * [Index](#index)
     * [Documentation](#documentation)
+    * [Naming](#naming)
 
 tk:
-* Class, Mixins & Variable Naming
 * Box-Sizing
 * Selectors: Specificity…
 * Filepaths, URLs
@@ -241,6 +241,36 @@ A super cool LESS library for an even cooler project by @boennemann
 
 @import "button/index";
 ```
+
+## Naming
+
+**Name classes like their module**. This means the module described under [Modules](#modules) is obviously named "button".
+
+All **mixins need to be namespaced** with their class name. As in `.button {…}` and `.button-color() {…}`.
+
+If you define **more than one class** in your module keep them in the same namespace.
+
+```css
+.table {…}
+.table-navigation {…}
+```
+
+If you define a **sub-element** of your module's main class make it dependent on the main class, or if it can exist on it's on make another module out of it.
+
+```css
+.navbar {…}
+.navbar .navbar-title {…}
+```
+
+```css
+.title {…}
+```
+
+**Variables** created inside a module should also be namespaced.
+```css
+@button-color: red;
+```
+
 
 ## Documentation
 
