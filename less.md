@@ -157,14 +157,14 @@ These modules follow specific rules:
 * Don't apply properties directly onto a class
 * Don't put class names or selectors into mixins. You may ignore this for pseudo classes.
 * Split up the styling for each tag, wrapper, logical unit, etc. into files.
-* Maintain one index file, which defines the imports and the class interface, the API so to say.
+* Maintain one index file, which defines the imports and the class interface, the public API so to say.
 
 Example module for a button:
 
 ```css
 /* box.less */
 
-.button-box {
+.button-box() {
   display: inline-block;
   height : 22px;
   width  : 100px;
@@ -174,7 +174,7 @@ Example module for a button:
 ```css
 /* type.less */
 
-.button-type {
+.button-type() {
   color      : @textColor;
   font-size  : @baseFontSize;
   line-height: 100%;
@@ -186,10 +186,10 @@ Example module for a button:
 
 @button-color: red;
 
-.button-color {
+.button-color() {
   background: @button-color;
   &:active {
-    background: darken(@button-color,10%);
+    background: darken(@button-color, 10%);
   }
 }
 ```
@@ -203,7 +203,9 @@ Example module for a button:
 /*
 # Button
 A button.
+
   <div class='button'>Button</div>
+
 */
 
 .button {
@@ -218,8 +220,8 @@ A button.
 
 The project's index is the file we later pass to the transpiler and it contains:
 
-* A license/description header (optional)
-* Library imports (normalize/bootstrap/whatever) (optional)
+* A license/description header
+* Library imports (normalize/bootstrap/whatever)
 * Configuration imports
 * Helper imports
 * Module imports
