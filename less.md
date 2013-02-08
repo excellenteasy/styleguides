@@ -13,6 +13,17 @@ Please note that this is a work-in-progress: there is much more that can be spec
     * [Comments](#comments)
         * [Block Comments](#block-comments)
         * [Inline Comments](#inline-comments)
+    * [Project Organization](#project-organization)
+        * [Configuration](#configuration)
+        * [Helpers](#helpers)
+        * [Modules](#modules)
+        * [Index](#index)
+
+tk:
+* Class, Mixins & Variable Naming
+* Box-Sizing
+* Selectors: Specificity…
+* Filepaths, URLs
 
 ## Code Layout
 
@@ -50,7 +61,8 @@ Don't include trailing whitespace on any lines.
 ### Property Order
 
 Property order is defined by 3 things. **Functionality**, **logical groups** and in a small part **alphabetical order**.
-_These are very loose rules, because there is no order, that wouldn't require tons of execptions._
+
+_These are very loose rules, because there is no order, that wouldn't require tons of exeptions._
 
 Do things on purpose and do things consistently.
 
@@ -96,3 +108,138 @@ Do not use inline comments when they state the obvious:
   height: 100%;
 }
 ```
+
+## Project Organization
+In general, the file organization should follow this scaffold:
+
+```
+src
+├── config
+│   └── variables.less
+├── helpers
+│   └── mixins.less
+├── $modulename
+│   ├── $functionality.less
+│   ├── functionalities…
+│   └── index.less
+├── modules…
+└── $projectname.less
+```
+
+### Configuration
+
+Configuration variables that impact the whole codebase are stored in `config/variables.less`.
+
+```css
+@baseFontSize: 14px;
+@textColor: lighten(black, 10%);
+```
+
+### Helpers
+
+Helpers are mixins that abstract low-level CSS problems for reuse throughout the whole project and are stored in `helpers/mixins.less`
+
+```css
+.ellipsis() {
+  overflow     : hidden;
+  text-overflow: ellipsis;
+  white-space  : nowrap;
+}
+```
+
+### Modules
+
+The styling of a specific component, UI element, you name it, has to be split up into modules.
+
+These modules follow specific rules:
+
+* **Everything is a mixin**
+* Don't apply properties directly onto a class
+* Don't put class names or selectors into mixins. You may ignore this for pseudo classes.
+* Split up the styling for each tag, wrapper, logical unit, etc. into files.
+* Maintain one index file, which defines the imports and the class interface, the API so to say.
+
+Example module for a button:
+
+```css
+/* box.less */
+
+.button-box {
+  display: inline-block;
+  height : 22px;
+  width  : 100px;
+}
+```
+
+```css
+/* type.less */
+
+.button-type {
+  color      : @textColor;
+  font-size  : @baseFontSize;
+  line-height: 100%;
+}
+```
+
+```css
+/* color.less */
+
+@button-color: red;
+
+.button-color {
+  background: @button-color;
+  &:active {
+    background: darken(@button-color,10%);
+  }
+}
+```
+
+```css
+/* index.less */
+@import "box";
+@import "type";
+@import "color";
+
+/*
+# Button
+A button.
+  <div class='button'>Button</div>
+*/
+
+.button {
+  .button-box;
+  .button-type;
+  .button-color;
+  .ellipsis;
+}
+```
+
+### Index
+
+The project's index is the file we later pass to the transpiler and it contains:
+
+* A license/description header (optional)
+* Library imports (normalize/bootstrap/whatever) (optional)
+* Configuration imports
+* Helper imports
+* Module imports
+
+```css
+/* projectname.less */
+
+/*!
+A super cool LESS library for an even cooler project by @boennemann
+*/
+
+@import "../lib/normalize";
+
+@import "config/variables";
+@import "helpers/mixins";
+
+@import "button/index";
+```
+
+
+
+
+
