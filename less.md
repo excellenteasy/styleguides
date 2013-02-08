@@ -25,6 +25,8 @@ tk:
 * Box-Sizing
 * Selectors: Specificity…
 * Filepaths, URLs
+* Cross module mixin use and mixins globaling
+* Dependency managment
 
 ## Code Layout
 
