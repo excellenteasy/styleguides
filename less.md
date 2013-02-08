@@ -18,6 +18,7 @@ Please note that this is a work-in-progress: there is much more that can be spec
         * [Helpers](#helpers)
         * [Modules](#modules)
         * [Index](#index)
+    * [Documentation](#documentation)
 
 tk:
 * Class, Mixins & Variable Naming
@@ -241,7 +242,20 @@ A super cool LESS library for an even cooler project by @boennemann
 @import "button/index";
 ```
 
+## Documentation
 
+> [StyleDocco](http://jacobrask.github.com/styledocco/) generates style guide documents from your stylesheets by parsing your stylesheet comments through Markdown.
 
+```css
+/*
+# Button
+A button …
 
+    <div class='button'>Button</div>
 
+*/
+.button {
+    background: blue;
+    color: white;
+}
+```
