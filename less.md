@@ -6,7 +6,7 @@ Please note that this is a work-in-progress: there is much more that can be spec
 
 ## Table of Contents
 
-* [The LESS Style Guide](#coffeescript-style-guide)
+* [The LESS Style Guide](#less-style-guide)
     * [Code Layout](#code-layout)
         * [Spacing and Alignment](#spacing-and-alignment)
         * [Property Order](#property-order)
